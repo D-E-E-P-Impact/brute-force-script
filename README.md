@@ -89,8 +89,8 @@ def brute_force_ssh(hostname, username, password_file):
 
 def main():
     # Prompt user for SSH connection details
-    hostname = input("Enter the hostname or IP address of the remote server (default: 192.168.50.30): ") or '192.168.50.30'
-    username = input("Enter your username (default: will): ") or 'will'
+    hostname = input("Enter the hostname or IP address of the remote server (default: X.X.X.X): ") or 'X.X.X.X'
+    username = input("Enter your username (default: XXX): ") or 'XXX'
     password = input("Enter your password (press Enter to skip): ")
 
     if password:
