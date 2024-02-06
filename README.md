@@ -1,13 +1,19 @@
 #!/usr/bin/env python3
-# Script is for fun 
-# Resources Google, Bard, ChatGPT
+# 2/6/2024
+# Script - This is an example of a Brute force script 
+    # It allows a user to SSH into a known IP with a Known User and tries different passwords with the file provided
+    # The script will then Search for .zip files 
+    # If files are found it will move them to the host PC of the script into a new folder 
+    # Once files have been copied over it will then move the found files into a new folder 
+    # Once in the new folder it will zip and encrypt these files with a default password 
+    # Once encrypted the script will then delete the original .zip files. 
 
-import paramiko #install with pip install paramiko
+# Resources Google, Bard, ChatGPT, https://www.paramiko.org/: https://www.paramiko.org/
+
+import paramiko #install with pip install paramiko resource https://www.paramiko.org/: https://www.paramiko.org/
 import os
 from paramiko import SSHClient, AutoAddPolicy
 from scp import SCPClient # Install with pip install scp
-
-
 
 def brute_force_ssh(hostname, username, password_file):
     # Create an SSH client instance
